@@ -139,42 +139,42 @@ $(document).ready(function(){
 // This is rules , where form_name e.t.c = name of form input field.
 function validation(id) {
 	$(id).validate({
-		rules: {
-			familyname: {
-				required: true
-			},
-			name: {
-				required:true
-			},
-			email: {
-				email: true,
-				required:true
-			},
-			q1: {
-				required:true
-			},
-			q2: {
-				required:true
-			},
-			q3: {
-				required:true
-			},
-			q4: {
-				required:true
-			},
-			q5: {
-				required:true
-			},
-			q6: {
-				required:true
-			},
-			// q7: {
-			// 	required:true
-			// },
-			q8: {
-				required:true
-			}
-		}
+		// rules: {
+		// 	familyname: {
+		// 		required: true
+		// 	},
+		// 	name: {
+		// 		required:true
+		// 	},
+		// 	email: {
+		// 		email: true,
+		// 		required:true
+		// 	},
+		// 	q1: {
+		// 		required:true
+		// 	},
+		// 	q2: {
+		// 		required:true
+		// 	},
+		// 	q3: {
+		// 		required:true
+		// 	},
+		// 	q4: {
+		// 		required:true
+		// 	},
+		// 	q5: {
+		// 		required:true
+		// 	},
+		// 	q6: {
+		// 		required:true
+		// 	},
+		// 	// q7: {
+		// 	// 	required:true
+		// 	// },
+		// 	q8: {
+		// 		required:true
+		// 	}
+		// }
 	});
 }
 
