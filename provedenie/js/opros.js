@@ -1,6 +1,6 @@
 	var checked_img_url = 'https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png';
 	var notchecked_img_url = 'https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_notsellected.png';
-	
+
 	$(document).ready(function function_name(argument) {
 		$('.drop-down .arrowdown').click(function (e) {
 			$(e.target.previousElementSibling).click();
@@ -454,11 +454,18 @@ jQuery(document).ready(function(e) {
 			console.log('Полученный результат массива: 1 этап',finishResult);
 
 			/* Redirected function */ 
+			// var handlers = {
+			// 	Начальный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/junior"},3500)},
+			// 	Уверенный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/upper-middle"},3500)},	
+			// 	Опытный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/middle" },3500)},
+			// 	Профессионал: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/senior" },3500)}
+			// }
+
 			var handlers = {
-				Начальный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/junior"},3500)},
-				Уверенный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/upper-middle"},3500)},	
-				Опытный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/middle" },3500)},
-				Профессионал: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/senior" },3500)}
+				Начальный: function() { console.log('выбрано');},
+				Уверенный: function() { console.log('выбрано');},
+				Опытный: function() { console.log('выбрано');},
+				Профессионал: function() function() { console.log('выбрано');}
 			}
 
 			/* Sorting massive by priority by Hierarchy (1-st place Professional) */
