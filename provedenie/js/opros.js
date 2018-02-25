@@ -232,7 +232,7 @@ jQuery(document).ready(function(e) {
 				if (e.target[i].type == 'submit') {
 					e.target[i].type == 'submit' ? e.target[i].classList.add('succes-submit') : ''
 					e.target[i].type == 'submit' ? e.target[i].innerHTML = 'ГОТОВО !' : '';
-					e.target[i].type == 'submit' ? e.target[i].setAttribute('disabled','disabled') : '';
+					// e.target[i].type == 'submit' ? e.target[i].setAttribute('disabled','disabled') : '';
 				}
 			}
 
