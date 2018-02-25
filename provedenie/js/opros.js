@@ -104,8 +104,8 @@ $(document.body).click(function(e){
 			$('#'+radioInputTarget).removeAttr('checked'); // Убираем checked на скрытом radioinput
 			$(target).removeAttr('checked'); // Убираем с img checked
 			$(target).attr('src', notchecked_img_url); // Ставим картинку без галки на Img	
-			$('#'+radioInputTarget)[0].checked = true; // Добавляем checked в объект.
 		} else { // Если на картинке нет атрибута checked
+			$('#'+radioInputTarget)[0].checked = true; // Добавляем checked в объект.
 			radioInputTarget = $(target).attr('radioinputtarget'); // переопределяем переменную.
 			$('#'+radioInputTarget).attr('checked',''); // Добавляем checked на скрытом radioinput
 			$(target).attr('checked',''); // Добавляем checked на картинку.
