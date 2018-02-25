@@ -101,12 +101,12 @@ jQuery(document).ready(function() {
 			radioInputTarget = $(target).attr('radioinputtarget'); // Запишем значение поля radioinputtarget
 			$('#'+radioInputTarget).removeAttr('checked'); // Убираем checked на скрытом radioinput
 			$(target).removeAttr('checked'); // Убираем с img checked
-			$(target).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_notsellected.png'); // Ставим картинку без галки на Img	
+			$(target).attr('src','img/checkbox_notsellected.png'); // Ставим картинку без галки на Img	
 		} else { // Если на картинке нет атрибута checked
 			radioInputTarget = $(target).attr('radioinputtarget'); // переопределяем переменную.
 			$('#'+radioInputTarget).attr('checked',''); // Добавляем checked на скрытом radioinput
 			$(target).attr('checked',''); // Добавляем checked на картинку.
-			$(target).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png'); // добавляем картинку с галкой.
+			$(target).attr('src','img/checkbox_sellected.png'); // добавляем картинку с галкой.
 
 			for (var i = 0; i < $('.radioInput-circle').length; i++) { // Если в момент клика input checked и имеет атрибут required то обнуляет style текста.
 				if ($('.radioInput-circle')[i].hasAttribute('checked') && $('.radioInput-circle')[i].hasAttribute('required')) {
@@ -124,7 +124,7 @@ $(document).ready(function(){
 		if ($('.radioInput-circle')[i].hasAttribute('checked')) {
 			if ($('.radioInput-circle')[i].getAttribute('checkboximgtarget') != null) {
 				var radioImgTarget = $('.radioInput-circle')[i].getAttribute('checkboximgtarget');
-				$('.'+radioImgTarget).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png');
+				$('.'+radioImgTarget).attr('src','img/checkbox_sellected.png');
 			}
 		}
 	}
@@ -215,7 +215,7 @@ jQuery(document).ready(function(e) {
 				if ($('.radioInput-circle')[i].hasAttribute('checked')) {
 					if ($('.radioInput-circle')[i].getAttribute('checkboximgtarget') != null) {
 						var radioImgTarget = $('.radioInput-circle')[i].getAttribute('checkboximgtarget');
-						$('.'+radioImgTarget).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png');
+						$('.'+radioImgTarget).attr('src','img/checkbox_sellected.png');
 					}
 				}
 			}

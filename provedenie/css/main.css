@@ -11,7 +11,7 @@
   src: url("https://static.tildacdn.com/tild6530-3166-4231-b338-316666396363/MullerBlack.woff"); }
 
 .result-txt {
-  font-family: "MullerRegular";
+  font-family: "Muller";
   line-height: 1.3; }
 
 .test-result {
@@ -152,6 +152,9 @@
 .fz14_13 {
   font-size: 14px !important; }
 
+#interview ul {
+  padding-left: 0 !important; }
+
 .interview {
   max-width: 624px;
   display: block;
@@ -266,7 +269,7 @@
   .wrapp-spisok .arrowdown {
     width: 15px;
     position: absolute;
-    top: 23px;
+    top: 19px;
     right: 14px;
     cursor: pointer; }
 

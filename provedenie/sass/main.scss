@@ -173,6 +173,9 @@ line-height: 1.3
 }
 #interview {
 	// margin-top: 25px;
+	ul {
+		padding-left: 0 !important;
+	}
 }
 .interview {
 	max-width: 624px;
@@ -307,7 +310,7 @@ line-height: 1.3
 		.arrowdown {
 			width: 15px;
 			position: absolute;
-			top: 23px;
+			top: 19px;
 			right: 14px;
 			cursor: pointer;
 		}
