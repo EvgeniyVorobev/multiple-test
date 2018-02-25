@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/opros.js"></script>
+	<!-- <script src="js/scripts.js"></script> -->
+</head>
+<body>
+	
+	<div class="interview">
+		<div class="text-wrap">				
+			<!-- <h3 class="text-center ext-bold ac-color fz20_18_16_12">МЫ ХОТИМ БОЛЬШЕ УЗНАТЬ О ВАС, ЧТОБЫ СТАТЬ ЛУЧШЕ</h3> -->
+			<h1 class="text-center fz40_32_22">НАЧИНАЙ!</h1>
+			<p class="text-center" style="max-width:620px; margin: 0 auto;">Ответь на вопросы, выбирая правильные варианты ответа. По окончанию теста ты узнаешь кто ты - Начинающий, Опытный, Уверенный или Профессиональный ведущий!</p>
+		</div>
+		<div class="form-wrap">
+			<form method="POST" id="interview">
+				<input id="name" class="half-width" type="text" name="name" placeholder="ИМЯ">
+				<input id="familyname" class="half-width right" type="text" name="familyname" placeholder="ФАМИЛИЯ">
+				<input id="email" class="full-width" type="text" name="email" placeholder="EMAIL">
+
+				<!-- drop-down single full-width-->
+				<div class="drop-down single">
+					<label class="real pt10" for="marriedchildrens">Сколько мероприятий за деньги вы провели? ( нужно выбрать один ответ)</label class="real">
+						<div class="wrapp-spisok">
+							<input id="q1" class="spisok single full-width" type="text" name="q1" fieldname="Сколько мероприятий за деньги вы провели? ( нужно выбрать один ответ)" placeholder="Выберите вариант" readonly="">
+							<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+							<ul style="display:none">
+								<li value='1'>Меньше 5</li>
+								<li value='2'>От 5 до 30</li>
+								<li value='3'>От 30 до 200</li>
+								<li value='4'>Более 200</li>
+							</ul>
+						</div>					
+					</div>
+					<!-- //drop-down -->
+
+					<!-- drop-down multiple full-width-->
+					<div class="drop-down multiple">
+						<label class="real pt10" for="worktype">Что из перечисленного у вас есть в портфолио? (Несколько вариантов ответа)</label class="real">
+							<div class="wrapp-spisok">
+								<input id="q2" class="spisok multiple full-width" type="text" name="q2" fieldname="Что из перечисленного у вас есть в портфолио? (Несколько вариантов ответа)" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+								<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+								<ul style="display:none">
+									<li value="1">Архив рабочих фотографий</li>
+									<li value="2">Архив студийных фотографий </li>
+									<li value="3">Официальный сайт</li>
+									<li value="4">Корпоративное промо-видео</li>
+									<li value="5">Свадебное промо-видео</li>
+									<li value="6">Промо-видео без монтажа более 5 минут</li>
+									<li value="7">PDF- презентация</li>
+									<li value="8">Пресс-релиз</li>
+								</ul>
+							</div>					
+						</div>
+						<!-- //drop-down -->
+
+						<!-- drop-down single full-width-->
+						<div class="drop-down single">
+							<label class="real pt10" for="worktype">Когда клиент должен узнать вашу стоимость?</label class="real">
+								<div class="wrapp-spisok">
+									<input id="q3" class="spisok single full-width" type="text" fieldname="Когда клиент должен узнать вашу стоимость?" name="q3" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+									<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+									<ul style="display:none">
+										<li value="1">Только на встрече</li>
+										<li value="2">В онлайн-переписке (соц.сети)</li>
+										<li value="3">В телефонном разговоре </li>
+										<li value="4">На вашем официальном сайте</li>
+									</ul>
+								</div>					
+							</div>
+							<!-- //drop-down -->
+
+
+							<!-- drop-down multiple full-width-->
+							<div class="drop-down single">
+								<label class="real pt10" for="worktype">Что входит в стоимость ваших услуг?</label class="real">
+									<div class="wrapp-spisok">
+										<input id="q4" class="spisok multiple full-width" type="text" fieldname="Что входит в стоимость ваших услуг?" name="q4" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+										<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+										<ul style="display:none">
+											<li value="1">Только моя работа</li>
+											<li value="2">Моя работа и работа DJ</li>
+											<li value="3">Моя работа и работа DJ и комплект оборудования </li>
+											<li value="4">Моя работа и работа DJ и комплект оборудования и элементы шоу-программы</li>
+										</ul>
+									</div>					
+								</div>
+								<!-- //drop-down -->
+
+								<!-- drop-down single full-width-->
+								<div class="drop-down single">
+									<label class="real pt10" for="worktype">Есть ли у вас чёрный смокинг?</label class="real">
+										<div class="wrapp-spisok">
+											<input id="q5" class="spisok single full-width" type="text" name="q5" fieldname="Есть ли у вас чёрный смокинг?" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+											<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+											<ul style="display:none">
+												<li value="1">Да</li>
+												<li value="2">Нет</li>
+											</ul>
+										</div>					
+									</div>
+									<!-- //drop-down -->
+
+									<!-- drop-down multiple full-width-->
+									<div class="drop-down single">
+										<label class="real pt10" for="worktype">Сколько книг в год вы читаете?</label class="real">
+											<div class="wrapp-spisok">
+												<input id="q6" class="spisok multiple full-width" type="text" name="q6" fieldname="Есть ли у вас чёрный смокинг?" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+												<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+												<ul style="display:none">
+													<li value='1'>Менее 3</li>
+													<li value='2'>От 3 до 5</li>
+													<li value='3'>От 5 до 8</li>
+													<li value='4'>Более 9</li>
+												</ul>
+											</div>					
+										</div>
+										<!-- //drop-down -->
+
+
+										<!-- drop-down multiple full-width-->
+										<div class="drop-down multiple">
+											<label class="real pt10" for="worktype">Без каких традиций невозможно свадебное торжество? (Несколько вариантов)</label class="real">
+												<div class="wrapp-spisok">
+													<input id="q7" class="spisok multiple full-width" type="text" name="q7" fieldname="Без каких традиций не возможно свадебное торжество? (Несколько вариантов)" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+													<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+													<ul style="display:none">
+														<li>Каравай</li>
+														<li value="2">Букет и Подвязка</li>
+														<li>Сборы на мальчика и девочку </li>
+														<li>Кража невесты </li>
+														<li>Семейный очаг </li>
+													</ul>
+												</div>					
+											</div>
+											<!-- //drop-down -->
+
+
+											<!-- drop-down multiple full-width-->
+											<div class="drop-down multiple">
+												<label class="real pt10" for="worktype">Что вы сделаете, если один из влиятельных гостей попросит убавить музыку во время дискотеки? (Несколько вариантов)</label class="real">
+													<div class="wrapp-spisok">
+														<input id="q8" class="spisok multiple full-width" type="text" name="q8" fieldname="Что вы сделаете, если один из влиятельных гостей попросит убавить музыку во время дискотеки? (Несколько вариантов)" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+														<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+														<ul style="display:none">
+															<li value="1">Скажу Dj, чтобы немедленно убавил музыку</li>
+															<li value="2">Согласую этот вопрос с организатором мероприятия</li>
+															<li value="3">Согласую этот вопрос с клиентом на прямую, если мероприятие без организатора</li>
+															<li value="4">Подожду пока он повторит свою просьбу через некоторое время</li>
+															<li value="5">Сделаем вид с Dj, что убавляем музыку, но оставим все, как есть</li>
+														</ul>
+													</div>					
+												</div>
+												<!-- //drop-down -->
+
+
+					<!-- textarea + text
+					<div class="pt10">
+						<label class="real" for="q1">ПОЧЕМУ ВЫ ХОТИТЕ СВОЕ ДЕЛО, ЕСЛИ ХОТИТЕ? (ЕСЛИ НЕТ — НАПИШИТЕ «НЕТ»)</label class="real">
+							<textarea id="q1" name="q1" id="q1" cols="30" rows="5"></textarea>
+						</div>
+						//textarea + text
+					
+						textarea + text
+						<div class="">
+							<label class="real" for="q2">ЕСЛИ ВЫ ПРОБОВАЛИ НАЧАТЬ СВОЕ ДЕЛО, ПОДЕЛИТЕСЬ СВОИМ ОПЫТОМ, ПАРУ ПРЕДЛОЖЕНИЙ УЖЕ БУДЕТ ОТЛИЧНО (ЕСЛИ НЕТ — НАПИШИТЕ «НЕТ»)</label class="real">
+								<textarea id="q2" name="q2" id="q2" cols="30" rows="5"></textarea>
+							</div>
+							//textarea + text
+					
+							textarea + text
+							<div class="">
+								<label class="real" for="q3">КАКОЙ ВАШ САМЫЙ БОЛЬШОЙ СТРАХ? ЧЕГО ВАМ НЕ ХВАТАЕТ ДЛЯ СТАРТА?</label class="real">
+									<textarea id="q3" name="q3" id="q3" cols="30" rows="5"></textarea>
+								</div>
+								//textarea + text
+					
+								textarea + text
+								<div class="">
+									<label class="real" for="q4">О КАКОЙ ЖИЗНИ ВЫ МЕЧТАЕТЕ? ЕСЛИ БЫ У ВАС БЫЛИ ВСЕ НУЖНЫЕ РЕСУРСЫ, КАКОЙ БЫ БЫЛА ВАША ЖИЗНЬ ЧЕРЕЗ 5 ЛЕТ? ЭТО КАК РАЗ СРОК ОКУПАЕМОСТИ + ВЫХОД НА КЛАССНУЮ ОПЕРАЦИОННУЮ ПРИБЫЛЬНОСТЬ :)</label class="real">
+										<textarea id="q4" name="q4" id="q4" cols="30" rows="5"></textarea>
+									</div>
+									//textarea + text
+					
+									textarea + text
+									<div class="">
+										<label class="real" for="q5">ЧЕГО БЫ ВАМ ТОЧНО НЕ ХОТЕЛОСЬ В ЖИЗНИ?</label class="real">
+											<textarea id="q5" name="q5" id="q5" cols="30" rows="5"></textarea>
+										</div>
+										//textarea + text
+					
+										textarea + text
+										<div class="">
+											<label class="real" for="q6">ЧТО ВАМ НРАВИТСЯ? (ПРОСТО ВСЕ ПОДРЯД, БЕЗ КАТЕГОРИЙ)</label class="real">
+												<textarea id="q6" name="q6" id="q6" cols="30" rows="5"></textarea>
+											</div>
+											//textarea + text
+					
+											textarea + text
+											<div class="">
+												<label class="real" for="q7">ЧТО ВАМ НЕ НРАВИТСЯ?</label class="real">
+													<textarea id="q7" name="q7" id="q7" cols="30" rows="5"></textarea>
+												</div>
+												//textarea + text
+					
+												drop-down multiple
+												<div class="drop-down multiple">
+													<div class="wrapp-spisok">
+														<input id="socnetwork" class="spisok multiple full-width" type="text" name="socnetwork" placeholder="КАКИМИ СОЦ СЕТЯМИ ВЫ ПОЛЬЗУЕТЕСЬ?" readonly="">
+														<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+														<ul style="display:none">
+															<li>ФЭЙСБУК</li>
+															<li>ИНСТАГРАМ</li>
+															<li>ВКОНТАКТЕ</li>
+															<li>ТВИТТЕР</li>
+															<li>ОДНОКЛАССНИКИ</li>
+														</ul>
+													</div>					
+												</div>
+												//drop-down
+					
+												drop-down multiple
+												<div class="drop-down multiple">
+													<div class="wrapp-spisok">
+														<input id="messanger" class="spisok multiple full-width" type="text" name="messanger" placeholder="ПОЛЬЗУЕТЕСЬ ЛИ ВЫ МЕССЕНДЖЕРАМИ? МОЖНО ВЫБРАТЬ НЕСКОЛЬКО ВАРИАНТОВ" readonly="">
+														<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+														<ul style="display:none">
+															<li>WHATSAPP</li>
+															<li>FACEBOOK</li>
+															<li>TELEGRAM</li>
+															<li>VIBER</li>
+														</ul>
+													</div>					
+												</div>
+												//drop-down
+					
+												drop-down single
+												<div class="drop-down single">
+													<div class="wrapp-spisok">
+														<input id="whereknow" class="spisok single full-width" type="text" name="whereknow" placeholder="ЗНАЕТЕ ЛИ ВЫ О МЕСТНОЙ ЕДЕ?" readonly="">
+														<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+														<ul style="display:none">
+															<li>ДА</li>
+															<li>НЕТ</li>
+														</ul>
+													</div>					
+												</div>
+												//drop-down
+					
+												textarea + text
+												<div class="pt10">
+													<label class="real" for="q8">ОТКУДА ВЫ ЗНАЕТЕ О МЕСТНОЙ ЕДЕ?</label class="real">
+														<textarea id="q8" name="q8" id="q8" cols="30" rows="5"></textarea>
+													</div>
+													//textarea + text
+					
+													drop-down multiple
+													<div class="drop-down multiple">
+														<div class="wrapp-spisok">
+															<input id="knowaboutus" class="spisok multiple full-width" type="text" name="knowaboutus" placeholder="КАКИЕ ИЗ НАШИХ ПРОЕКТОВ ВЫ ПОСЕЩАЛИ? МОЖНО ВЫБРАТЬ НЕСКОЛЬКО ВАРИАНТОВ" readonly="">
+															<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+															<ul style="display:none">
+																<li>БЫЛ НА МАРКЕТЕ</li>
+																<li>УЧАСТВОВАЛ В МАРКЕТЕ</li>
+																<li>ПРОХОДИЛ КУРС В ШКОЛЕ</li>
+																<li>УЧАСТВОВАЛ В POP UP</li>
+																<li>ПРОСТО СЛЫШАЛ</li>
+																<li>Я ВАШ ФАНАТ</li>
+															</ul>
+														</div>					
+													</div>
+													//drop-down
+					
+													drop-down single
+													<div class="drop-down single">
+														<div class="wrapp-spisok">
+															<input id="subscribe" class="spisok single full-width" type="text" name="subscribe" placeholder="ПОДПИСАНЫ ЛИ ВЫ НА КАКИЕ-ТО РАССЫЛКИ? МОЖНО ВЫБРАТЬ НЕСКОЛЬКО ВАРИАНТОВ" readonly="">
+															<img class="arrowdown" src="img/arrowpointtodown.svg" alt="">
+															<ul style="display:none">
+																<li>ДА, НО НЕ НА ВАШУ</li>
+																<li>ДА, НА ВАШУ</li>
+																<li>НЕТ, БЕСИТ</li>
+															</ul>
+														</div>					
+													</div>
+													//drop-down
+					
+													textarea + text
+													<div class="pt10">
+														<label class="real" for="q9">ДАЙТЕ НАМ СОВЕТ? ЧТО СДЕЛАТЬ ТАКОГО, ЧТОБЫ БЫТЬ МАКСИМАЛЬНО ПОЛЕЗНЫМИ ВАМ?</label class="real">
+															<textarea name="q9" id="q9" cols="30" rows="5"></textarea>
+														</div>
+														//textarea + text -->
+
+
+														<div class="checbox-wrapp pt10">
+															<div class="item" style="display: flex;">
+																<input class="radioInput-circle" id="radio-input2" checkboximgtarget="checkbox-block2" texttarget="textTarget2" type="checkbox" fieldname="Согласен с условиями?" name="form_checkbox2" style="width:0px" checked="" required="" aria-required="true">	
+																<!-- <img class="error_arrow" src="img/arrow-red-right-down.png" alt="" hidden=""> -->
+																<img id="checbox-block" class="radioinput checkbox-block2" radioinputtarget="radio-input2" src="img/checkbox_sellected.png" checked="" alt=""><p class="textTarget2 fz14_13">Я даю свое <a target="_blank" href="http://school.locallocal.ru/terms" class="fz14_13 textTarget2 underscoring_url">согласие</a> на обработку персональных данных</p>
+															</div>
+														</div>
+														<button type="submit" style="margin-top:17px;">УЗНАТЬ РЕЗУЛЬТАТ</button>
+														<!-- <button type="button" disabled class="description_error" style="margin-top:5px;">ТЫ ОТВЕТИЛ НЕ НА ВСЕ ВОПРОСЫ!</button> -->
+													</form>
+												</div>
+											</div>
+
+
+
+										</body>
+										</html>
