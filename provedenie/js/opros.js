@@ -465,7 +465,7 @@ jQuery(document).ready(function(e) {
 				Начальный: function() { console.log('выбрано');},
 				Уверенный: function() { console.log('выбрано');},
 				Опытный: function() { console.log('выбрано');},
-				Профессионал: function() function() { console.log('выбрано');}
+				Профессионал: function() { console.log('выбрано');}
 			}
 
 			/* Sorting massive by priority by Hierarchy (1-st place Professional) */
