@@ -107,6 +107,7 @@ $(document.body).click(function(e){
 		} else { // Если на картинке нет атрибута checked
 			radioInputTarget = $(target).attr('radioinputtarget'); // переопределяем переменную.
 			$('#'+radioInputTarget).attr('checked',''); // Добавляем checked на скрытом radioinput
+			$('#'+radioInputTarget).checked = true; // Добавляем checked в объект.
 			$(target).attr('checked',''); // Добавляем checked на картинку.
 			$(target).attr('src',checked_img_url); // добавляем картинку с галкой.
 
@@ -224,10 +225,11 @@ jQuery(document).ready(function(e) {
 			$('.description_error') ? $('.description_error').remove() : '';
 			$('#interview').append('<button type="button" disabled="" class="description_error" style="margin-top:5px;">ТЫ ОТВЕТИЛ НЕ НА ВСЕ ВОПРОСЫ!</button>');
 		}
-		if (validation) {   
+
+		if (validation ) {   
 			$.ajax({
 	// ТУТ ЗАПРОС ПРОПИСАТЬ
-}) 
+		}) 
 			for (var i = 0; i < e.target.length; i++) {
 				if (e.target[i].type == 'submit') {
 					e.target[i].type == 'submit' ? e.target[i].classList.add('succes-submit') : ''
@@ -235,8 +237,6 @@ jQuery(document).ready(function(e) {
 					// e.target[i].type == 'submit' ? e.target[i].setAttribute('disabled','disabled') : '';
 				}
 			}
-
-
 
 			var result = '';		
 			
@@ -536,6 +536,7 @@ jQuery(document).ready(function(e) {
 				// if (maxLevel == 'Профессионал') {
 				// 	$('.interview').append('<p class="result-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut blanditiis ab magnam maiores, consectetur ex reprehenderit amet recusandae placeat aliquid debitis repellendus aperiam esse. Qui illum ipsam, et natus suscipit, praesentium ex, vero ad enim possimus labore. Quisquam quaerat expedita temporibus voluptates voluptatum explicabo deleniti, cumque. Neque sapiente cupiditate nobis!</p>')
 				// }
+
 			}	
 		 });
 });
