@@ -1,10 +1,12 @@
-$(document).ready(function function_name(argument) {
+	var checked_img_url = 'https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png';
+	var notchecked_img_url = 'https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_notsellected.png';
+	
+	$(document).ready(function function_name(argument) {
+		$('.drop-down .arrowdown').click(function (e) {
+			$(e.target.previousElementSibling).click();
+		});
 
-	$('.drop-down .arrowdown').click(function (e) {
-		$(e.target.previousElementSibling).click();
-	});
-
-	/* SCRIPT FOR MULTIPLE DROPDOWN CHOICE */
+		/* SCRIPT FOR MULTIPLE DROPDOWN CHOICE */
 
 // открытие сворачивание списка
 $('.spisok.multiple').click(function(e){
@@ -92,21 +94,21 @@ $(document.body).click(function(e){
 /* ~~~ END OF SINGLE DROPDOWN CHOICE ~~~ */
 })
 
-/* ~~~~~~~~~~~~~~ CHECKBOX_SCRIPT ~~~~~~~~~~~ */
+	/* ~~~~~~~~~~~~~~ CHECKBOX_SCRIPT ~~~~~~~~~~~ */
 
-jQuery(document).ready(function() {
-	$('.radioinput').click(function (e){
-		target = e.target;
+	jQuery(document).ready(function() {
+		$('.radioinput').click(function (e){
+			target = e.target;
 			if ($(target).attr("checked")) { // Если на картинке есть атрибут checked			
 			radioInputTarget = $(target).attr('radioinputtarget'); // Запишем значение поля radioinputtarget
 			$('#'+radioInputTarget).removeAttr('checked'); // Убираем checked на скрытом radioinput
 			$(target).removeAttr('checked'); // Убираем с img checked
-			$(target).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_notsellected.png'); // Ставим картинку без галки на Img	
+			$(target).attr('src', notchecked_img_url); // Ставим картинку без галки на Img	
 		} else { // Если на картинке нет атрибута checked
 			radioInputTarget = $(target).attr('radioinputtarget'); // переопределяем переменную.
 			$('#'+radioInputTarget).attr('checked',''); // Добавляем checked на скрытом radioinput
 			$(target).attr('checked',''); // Добавляем checked на картинку.
-			$(target).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png'); // добавляем картинку с галкой.
+			$(target).attr('src',checked_img_url); // добавляем картинку с галкой.
 
 			for (var i = 0; i < $('.radioInput-circle').length; i++) { // Если в момент клика input checked и имеет атрибут required то обнуляет style текста.
 				if ($('.radioInput-circle')[i].hasAttribute('checked') && $('.radioInput-circle')[i].hasAttribute('required')) {
@@ -116,7 +118,7 @@ jQuery(document).ready(function() {
 			}	
 		}
 		;})	
-});
+	});
 
 // Скрипт который считывает атрибут checkboximgtarget у скрытых radiobutton , если стоит атрибут checked то берёт адрес из checkboximgtarget и вставляет картинку с галкой вместо пустого кружка.
 $(document).ready(function(){
@@ -124,7 +126,7 @@ $(document).ready(function(){
 		if ($('.radioInput-circle')[i].hasAttribute('checked')) {
 			if ($('.radioInput-circle')[i].getAttribute('checkboximgtarget') != null) {
 				var radioImgTarget = $('.radioInput-circle')[i].getAttribute('checkboximgtarget');
-				$('.'+radioImgTarget).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png');
+				$('.'+radioImgTarget).attr('src',checked_img_url);
 			}
 		}
 	}
@@ -215,7 +217,7 @@ jQuery(document).ready(function(e) {
 				if ($('.radioInput-circle')[i].hasAttribute('checked')) {
 					if ($('.radioInput-circle')[i].getAttribute('checkboximgtarget') != null) {
 						var radioImgTarget = $('.radioInput-circle')[i].getAttribute('checkboximgtarget');
-						$('.'+radioImgTarget).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png');
+						$('.'+radioImgTarget).attr('src',checked_img_url);
 					}
 				}
 			}
@@ -531,5 +533,5 @@ jQuery(document).ready(function(e) {
 		 });
 });
 
-/* //JQUERY VALIDATION  */
+	/* //JQUERY VALIDATION  */
 
