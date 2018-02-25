@@ -101,7 +101,7 @@ jQuery(document).ready(function() {
 			radioInputTarget = $(target).attr('radioinputtarget'); // Запишем значение поля radioinputtarget
 			$('#'+radioInputTarget).removeAttr('checked'); // Убираем checked на скрытом radioinput
 			$(target).removeAttr('checked'); // Убираем с img checked
-			$(target).attr('src','img/checkbox_notsellected.png'); // Ставим картинку без галки на Img	
+			$(target).attr('src','https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_notsellected.png'); // Ставим картинку без галки на Img	
 		} else { // Если на картинке нет атрибута checked
 			radioInputTarget = $(target).attr('radioinputtarget'); // переопределяем переменную.
 			$('#'+radioInputTarget).attr('checked',''); // Добавляем checked на скрытом radioinput
