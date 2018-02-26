@@ -459,7 +459,7 @@ jQuery(document).ready(function(e) {
 
 			/* Redirected function */ 
 			var handlers = {
-				Начальный: function() { setTimeout(function(){window.location = "http://ism2018.ru/sorry"},4500)}
+				Начальный: function() { setTimeout(function(){window.location = "http://ism2018.ru/sorry"},4500)},
 				Уверенный: function() { setTimeout(function(){window.location = "https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da"},3500)},	
 				Опытный: function() { setTimeout(function(){window.location = "https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da" },3500)},
 				Профессионал: function() { setTimeout(function(){window.location = "https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da" },3500)}
