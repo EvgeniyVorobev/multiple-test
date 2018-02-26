@@ -42,7 +42,7 @@
     font-family: 'MullerRegular'; }
 
 .error {
-  border-color: #ffc83c !important; }
+  border-color: #ffdb18 !important; }
 
 .description_error {
   border-radius: 7px;
@@ -105,7 +105,7 @@
 
 .underscoring_url {
   text-decoration: none;
-  color: black;
+  color: white;
   border-bottom: 2px solid #ffc83c;
   line-height: 20px; }
 
@@ -156,9 +156,12 @@
   padding-left: 0 !important; }
 
 .interview {
+
+    color: white;
   max-width: 624px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto; 
+    background-color: black;}
   .interview .login-form {
     margin-top: 50px;
     display: flex;
@@ -186,7 +189,7 @@
   display: block;
   height: 50px;
   padding: 0 60px;
-  background-color: #ffc83c;
+  background-color: #ffdb18;
   color: black;
   border: 0;
   font-family: "Muller";
@@ -265,7 +268,8 @@
     margin-left: 20px; }
 
 .wrapp-spisok {
-  position: relative; }
+  position: relative;
+      color: black; }
   .wrapp-spisok .arrowdown {
     width: 15px;
     position: absolute;
