@@ -210,7 +210,7 @@ jQuery(document).ready(function(e) {
 				if ($('.radioInput-circle')[i].hasAttribute('checked') == false && $('.radioInput-circle')[i].hasAttribute('required')) {
 					var textTarget = $('.radioInput-circle')[i].getAttribute('textTarget');
 					$(`.${textTarget}`).css({
-						color:'#e31d1a !important'
+						color:'#e31d1a'
 					}); 				
 				}
 			}
