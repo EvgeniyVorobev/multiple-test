@@ -105,7 +105,7 @@
 
 .underscoring_url {
   text-decoration: none;
-  color: black;
+  color: black !important;
   border-bottom: 2px solid #ffc83c;
   line-height: 20px; }
 
@@ -225,7 +225,7 @@
   #interview input::-webkit-input-placeholder, #interview input -moz-placeholder, #interview input -ms-input-placeholder {
     color: #333;
     font-size: 12px;
-    font-family: 'Muller';
+    font-family: 'MullerRegular';
     font-weight: bold; }
   #interview input.right {
     margin-left: 20px; }
