@@ -5,7 +5,7 @@
 		$('.drop-down .arrowdown').click(function (e) {
 			$(e.target.previousElementSibling).click();
 		});
-
+	console.log('asdas');
 		/* SCRIPT FOR MULTIPLE DROPDOWN CHOICE */
 
 // открытие сворачивание списка
@@ -140,42 +140,42 @@ $(document).ready(function(){
 // This is rules , where form_name e.t.c = name of form input field.
 function validation(id) {
 	$(id).validate({
-		// rules: {
-		// 	familyname: {
-		// 		required: true
-		// 	},
-		// 	name: {
-		// 		required:true
-		// 	},
-		// 	email: {
-		// 		email: true,
-		// 		required:true
-		// 	},
-		// 	q1: {
-		// 		required:true
-		// 	},
-		// 	q2: {
-		// 		required:true
-		// 	},
-		// 	q3: {
-		// 		required:true
-		// 	},
-		// 	q4: {
-		// 		required:true
-		// 	},
-		// 	q5: {
-		// 		required:true
-		// 	},
-		// 	q6: {
-		// 		required:true
-		// 	},
-		// 	// q7: {
-		// 	// 	required:true
-		// 	// },
-		// 	q8: {
-		// 		required:true
-		// 	}
-		// }
+		rules: {
+			familyname: {
+				required: true
+			},
+			name: {
+				required:true
+			},
+			email: {
+				email: true,
+				required:true
+			},
+			q1: {
+				required:true
+			},
+			q2: {
+				required:true
+			},
+			q3: {
+				required:true
+			},
+			q4: {
+				required:true
+			},
+			q5: {
+				required:true
+			},
+			q6: {
+				required:true
+			},
+			// q7: {
+			// 	required:true
+			// },
+			q8: {
+				required:true
+			}
+		}
 	});
 }
 
@@ -509,10 +509,12 @@ jQuery(document).ready(function(e) {
 						maxLevel = key;
 					}
 				}
-
 				console.log("[" + maxLevel + '] уровень больше:', maxCount);			
 				handlers[maxLevel](); 	// execute code for level			
+				evg(maxLevel,e.target) // run sending carrot Simple-form
 				/* End of repeated*/
+
+				
 
 				/* Result in popup.*/
 				// $('.description_error').remove()
