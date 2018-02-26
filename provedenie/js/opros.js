@@ -1,12 +1,12 @@
 	var checked_img_url = 'https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png';
 	var notchecked_img_url = 'https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_notsellected.png';
 
-	$(document).ready(function function_name(argument) {
-		$('.drop-down .arrowdown').click(function (e) {
-			$(e.target.previousElementSibling).click();
-		});
+$(document).ready(function function_name(argument) {
+	$('.drop-down .arrowdown').click(function (e) {
+	$(e.target.previousElementSibling).click();
+	});
 	console.log('asdas');
-		/* SCRIPT FOR MULTIPLE DROPDOWN CHOICE */
+/* SCRIPT FOR MULTIPLE DROPDOWN CHOICE */
 
 // открытие сворачивание списка
 $('.spisok.multiple').click(function(e){
@@ -454,18 +454,11 @@ jQuery(document).ready(function(e) {
 			console.log('Полученный результат массива: 1 этап',finishResult);
 
 			/* Redirected function */ 
-			// var handlers = {
-			// 	Начальный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/junior"},3500)},
-			// 	Уверенный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/upper-middle"},3500)},	
-			// 	Опытный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/middle" },3500)},
-			// 	Профессионал: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/senior" },3500)}
-			// }
-
 			var handlers = {
-				Начальный: function() { console.log('выбрано');},
-				Уверенный: function() { console.log('выбрано');},
-				Опытный: function() { console.log('выбрано');},
-				Профессионал: function() { console.log('выбрано');}
+				Начальный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/junior"},3500)},
+				Уверенный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/upper-middle"},3500)},	
+				Опытный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/middle" },3500)},
+				Профессионал: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/senior" },3500)}
 			}
 
 			/* Sorting massive by priority by Hierarchy (1-st place Professional) */
@@ -511,11 +504,9 @@ jQuery(document).ready(function(e) {
 				}
 				console.log("[" + maxLevel + '] уровень больше:', maxCount);			
 				handlers[maxLevel](); 	// execute code for level			
-				evg(maxLevel,e.target) // run sending carrot Simple-form
+				evgCarrot.interviewForm(maxLevel,e.target) // send result width form object to interviewForm.
 				/* End of repeated*/
-
-				
-
+		
 				/* Result in popup.*/
 				// $('.description_error').remove()
 				// $('body').append(`<div style="display:none" class="test-result">
