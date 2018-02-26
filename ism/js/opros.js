@@ -234,7 +234,7 @@ jQuery(document).ready(function(e) {
 				if (e.target[i].type == 'submit') {
 					e.target[i].type == 'submit' ? e.target[i].classList.add('succes-submit') : ''
 					e.target[i].type == 'submit' ? e.target[i].innerHTML = 'ГОТОВО !' : '';
-					// e.target[i].type == 'submit' ? e.target[i].setAttribute('disabled','disabled') : '';
+					e.target[i].type == 'submit' ? e.target[i].setAttribute('disabled','disabled') : '';
 				}
 			}
 
@@ -522,7 +522,7 @@ jQuery(document).ready(function(e) {
 
 				/* Result Add text */
 				if (maxLevel == 'Начальный') {
-					$('.interview').append('<p class="result-txt pt10">Дорогой шоумен. Мы уверены, ты классный человек и отличный перспективный ведущий. Но на данный момент мы советуем тебе пройти наш базовый тренинг для ведущих «Простарт». (картинка как вы делаете «афишу», картинка кликабельна и ведет на страницу простарт на проведение сайт). Приходи к нам в #домспроведением. (+ ссылка на контакты на проведение). Обсудим результаты и познакомимся. Хорошего тебе дня</p>')
+					$('.interview').append('')
 				}
 				if (maxLevel == 'Уверенный') {
 					$('.interview').append('<p class="result-txt pt10">Тестирование прошло успешно! Поздравляем. Сейчас ты будешь перенаправлен на страницу покупки билетов. Если не хочешь ждать, жми <a href="https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da">сюда</a>.</p>')
