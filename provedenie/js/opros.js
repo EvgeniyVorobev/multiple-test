@@ -294,7 +294,11 @@ jQuery(document).ready(function(e) {
 					} else if ( result == '1237') {
 						// console.log('ВАШ УРОВЕНЬ Уверенный');
 						finishResult.push('Уверенный')
-					} else if ( result == '12345678') {
+					} else if ( result == '123457') {
+						// console.log('ВАШ УРОВЕНЬ Уверенный');
+						finishResult.push('Уверенный')
+					}
+					 else if ( result == '12345678') {
 						// console.log('ВАШ УРОВЕНЬ Профессионал');
 						finishResult.push('Профессионал')
 					}
