@@ -460,9 +460,9 @@ jQuery(document).ready(function(e) {
 			/* Redirected function */ 
 			var handlers = {
 				Начальный: function() { setTimeout(function(){window.location = "http://ism2018.ru/sorry"},4500)},
-				Уверенный: function() { setTimeout(function(){window.location = "https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da"},3500)},	
-				Опытный: function() { setTimeout(function(){window.location = "https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da" },3500)},
-				Профессионал: function() { setTimeout(function(){window.location = "https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da" },3500)}
+				Уверенный: function() { setTimeout(function(){window.location = "https://api.ticketscloud.org/v1/widgets/common?m=i&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNWE0NjA4ZmQ1MTlmN2IwMDFlZjc4MWRhIn0.5-3POz0cY3ap9YZ9C9jbAAOFHUzOFjBicPjBLcRmAtQ&s=1&event=5a93f4ad519f7b0018c41681&category=592841f8515e35002dead90c&tags=592841f8515e35002dead90d%2C592841f8515e35002dead912"},3500)},	
+				Опытный: function() { setTimeout(function(){window.location = "https://api.ticketscloud.org/v1/widgets/common?m=i&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNWE0NjA4ZmQ1MTlmN2IwMDFlZjc4MWRhIn0.5-3POz0cY3ap9YZ9C9jbAAOFHUzOFjBicPjBLcRmAtQ&s=1&event=5a93f4ad519f7b0018c41681&category=592841f8515e35002dead90c&tags=592841f8515e35002dead90d%2C592841f8515e35002dead912" },3500)},
+				Профессионал: function() { setTimeout(function(){window.location = "https://api.ticketscloud.org/v1/widgets/common?m=i&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNWE0NjA4ZmQ1MTlmN2IwMDFlZjc4MWRhIn0.5-3POz0cY3ap9YZ9C9jbAAOFHUzOFjBicPjBLcRmAtQ&s=1&event=5a93f4ad519f7b0018c41681&category=592841f8515e35002dead90c&tags=592841f8515e35002dead90d%2C592841f8515e35002dead912" },3500)}
 			}
 
 			/* Sorting massive by priority by Hierarchy (1-st place Professional) */
@@ -525,13 +525,13 @@ jQuery(document).ready(function(e) {
 					$('.interview').append('')
 				}
 				if (maxLevel == 'Уверенный') {
-					$('.interview').append('<p class="result-txt pt10">Тестирование прошло успешно! Поздравляем. Сейчас ты будешь перенаправлен на страницу покупки билетов. Если не хочешь ждать, жми <a href="https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da">сюда</a>.</p>')
+					$('.interview').append('<p class="result-txt pt10">Тестирование прошло успешно! Поздравляем. Сейчас ты будешь перенаправлен на страницу покупки билетов. Если не хочешь ждать, жми <a href="https://api.ticketscloud.org/v1/widgets/common?m=i&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNWE0NjA4ZmQ1MTlmN2IwMDFlZjc4MWRhIn0.5-3POz0cY3ap9YZ9C9jbAAOFHUzOFjBicPjBLcRmAtQ&s=1&event=5a93f4ad519f7b0018c41681&category=592841f8515e35002dead90c&tags=592841f8515e35002dead90d%2C592841f8515e35002dead912">сюда</a>.</p>')
 				}
 				if (maxLevel == 'Опытный') {
-					$('.interview').append('<p class="result-txt pt10">Тестирование прошло успешно! Поздравляем. Сейчас ты будешь перенаправлен на страницу покупки билетов. Если не хочешь ждать, жми <a href="https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da">сюда</a>.</p>')
+					$('.interview').append('<p class="result-txt pt10">Тестирование прошло успешно! Поздравляем. Сейчас ты будешь перенаправлен на страницу покупки билетов. Если не хочешь ждать, жми <a href="https://api.ticketscloud.org/v1/widgets/common?m=i&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNWE0NjA4ZmQ1MTlmN2IwMDFlZjc4MWRhIn0.5-3POz0cY3ap9YZ9C9jbAAOFHUzOFjBicPjBLcRmAtQ&s=1&event=5a93f4ad519f7b0018c41681&category=592841f8515e35002dead90c&tags=592841f8515e35002dead90d%2C592841f8515e35002dead912">сюда</a>.</p>')
 				}
 				if (maxLevel == 'Профессионал') {
-					$('.interview').append('<p class="result-txt pt10">Тестирование прошло успешно! Поздравляем. Сейчас ты будешь перенаправлен на страницу покупки билетов. Если не хочешь ждать, жми <a href="https://5a4608fd519f7b001ef781da.ticketscloud.org/e/5a93f4ad519f7b0018c41681?partner_id=5a4608fd519f7b001ef781da">сюда</a>.</p>')
+					$('.interview').append('<p class="result-txt pt10">Тестирование прошло успешно! Поздравляем. Сейчас ты будешь перенаправлен на страницу покупки билетов. Если не хочешь ждать, жми <a href="https://api.ticketscloud.org/v1/widgets/common?m=i&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNWE0NjA4ZmQ1MTlmN2IwMDFlZjc4MWRhIn0.5-3POz0cY3ap9YZ9C9jbAAOFHUzOFjBicPjBLcRmAtQ&s=1&event=5a93f4ad519f7b0018c41681&category=592841f8515e35002dead90c&tags=592841f8515e35002dead90d%2C592841f8515e35002dead912">сюда</a>.</p>')
 				}
 
 			}	
