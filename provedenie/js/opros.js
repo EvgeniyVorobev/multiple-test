@@ -151,11 +151,6 @@ function validation(id) {
 				email: true,
 				required:true
 			},
-			phone: {
-				required:true,
-				number:true,
-				minlength: 5
-			},
 			q1: {
 				required:true
 			},
@@ -196,7 +191,6 @@ jQuery(document).ready(function(e) {
 		var familyname = jQuery("#familyname").val();
 		var name = jQuery("#name").val();
 		var email = jQuery("#email").val();
-		var phone = jQuery("#phone").val();
 		var q1 = jQuery("#q1").val();
 		var q2 = jQuery("#q2").val();
 		var q3 = jQuery("#q3").val();
@@ -232,10 +226,10 @@ jQuery(document).ready(function(e) {
 			$('#interview').append('<button type="button" disabled="" class="description_error" style="margin-top:5px;">ТЫ ОТВЕТИЛ НЕ НА ВСЕ ВОПРОСЫ!</button>');
 		}
 
-		if (validation ) {   
+		if (validation ) {   
 			$.ajax({
 	// ТУТ ЗАПРОС ПРОПИСАТЬ
-		}) 
+		}) 
 			for (var i = 0; i < e.target.length; i++) {
 				if (e.target[i].type == 'submit') {
 					e.target[i].type == 'submit' ? e.target[i].classList.add('succes-submit') : ''
@@ -463,7 +457,6 @@ jQuery(document).ready(function(e) {
 
 			console.log('Полученный результат массива: 1 этап',finishResult);
 
-
 			/* Redirected function */ 
 			var handlers = {
 				Начальный: function() { setTimeout(function(){window.location = "http://provedenie.org/opros/junior"},3500)},
@@ -542,7 +535,7 @@ jQuery(document).ready(function(e) {
 				// }
 
 			}	
-		 });
+		 });
 });
 
 	/* //JQUERY VALIDATION  */
