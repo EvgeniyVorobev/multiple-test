@@ -151,6 +151,11 @@ function validation(id) {
 				email: true,
 				required:true
 			},
+			phone: {
+				required:true,
+				number:true,
+				minlength: 5
+			},
 			q1: {
 				required:true
 			},
@@ -191,6 +196,7 @@ jQuery(document).ready(function(e) {
 		var familyname = jQuery("#familyname").val();
 		var name = jQuery("#name").val();
 		var email = jQuery("#email").val();
+		var phone = jQuery("#phone").val();
 		var q1 = jQuery("#q1").val();
 		var q2 = jQuery("#q2").val();
 		var q3 = jQuery("#q3").val();
