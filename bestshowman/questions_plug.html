@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/opros.js"></script>
+	<!-- <script src="js/scripts.js"></script> -->
+</head>
+<body>
+	
+	<div class="interview">
+		<div class="form-wrap">
+			<form method="POST" id="interview" simpleform>
+				<input id="name" class="half-width" type="text" name="name" placeholder="ИМЯ">
+				<input id="familyname" class="half-width right" type="text" name="familyname" placeholder="ФАМИЛИЯ">
+				<input id="email" class="full-width" type="text" name="email" placeholder="EMAIL">
+
+				<!-- drop-down single full-width-->
+				<div class="drop-down single">
+					<label class="real pt10" for="marriedchildrens">Сколько мероприятий за деньги вы провели? ( нужно выбрать один ответ)</label class="real">
+						<div class="wrapp-spisok">
+							<input id="q1" class="spisok single full-width" type="text" name="q1" fieldname="Сколько мероприятий за деньги вы провели? ( нужно выбрать один ответ)" placeholder="Выберите вариант" readonly="">
+							<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+							<ul style="display:none">
+								<li value='1'>Меньше 5</li>
+								<li value='2'>От 5 до 30</li>
+								<li value='3'>От 30 до 200</li>
+								<li value='4'>Более 200</li>
+							</ul>
+						</div>					
+					</div>
+					<!-- //drop-down -->
+
+					<!-- drop-down multiple full-width-->
+					<div class="drop-down multiple">
+						<label class="real pt10" for="worktype">Что из перечисленного у вас есть в портфолио? (Несколько вариантов ответа)</label class="real">
+							<div class="wrapp-spisok">
+								<input id="q2" class="spisok multiple full-width" type="text" name="q2" fieldname="Что из перечисленного у вас есть в портфолио? (Несколько вариантов ответа)" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+								<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+								<ul style="display:none">
+									<li value="1">Архив рабочих фотографий</li>
+									<li value="2">Архив студийных фотографий </li>
+									<li value="3">Официальный сайт</li>
+									<li value="4">Корпоративное промо-видео</li>
+									<li value="5">Свадебное промо-видео</li>
+									<li value="6">Промо-видео без монтажа более 5 минут</li>
+									<li value="7">PDF- презентация</li>
+									<li value="8">Пресс-релиз</li>
+								</ul>
+							</div>					
+						</div>
+						<!-- //drop-down -->
+
+						<!-- drop-down single full-width-->
+						<div class="drop-down single">
+							<label class="real pt10" for="worktype">Когда клиент должен узнать вашу стоимость?</label class="real">
+								<div class="wrapp-spisok">
+									<input id="q3" class="spisok single full-width" type="text" fieldname="Когда клиент должен узнать вашу стоимость?" name="q3" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+									<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+									<ul style="display:none">
+										<li value="1">Только на встрече</li>
+										<li value="2">В онлайн-переписке (соц.сети)</li>
+										<li value="3">В телефонном разговоре </li>
+										<li value="4">На вашем официальном сайте</li>
+									</ul>
+								</div>					
+							</div>
+							<!-- //drop-down -->
+
+
+							<!-- drop-down multiple full-width-->
+							<div class="drop-down single">
+								<label class="real pt10" for="worktype">Что входит в стоимость ваших услуг?</label class="real">
+									<div class="wrapp-spisok">
+										<input id="q4" class="spisok multiple full-width" type="text" fieldname="Что входит в стоимость ваших услуг?" name="q4" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+										<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+										<ul style="display:none">
+											<li value="1">Только моя работа</li>
+											<li value="2">Моя работа и работа DJ</li>
+											<li value="3">Моя работа и работа DJ и комплект оборудования </li>
+											<li value="4">Моя работа и работа DJ и комплект оборудования и элементы шоу-программы</li>
+										</ul>
+									</div>					
+								</div>
+								<!-- //drop-down -->
+
+								<!-- drop-down single full-width-->
+								<div class="drop-down single">
+									<label class="real pt10" for="worktype">Есть ли у вас чёрный смокинг?</label class="real">
+										<div class="wrapp-spisok">
+											<input id="q5" class="spisok single full-width" type="text" name="q5" fieldname="Есть ли у вас чёрный смокинг?" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+											<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+											<ul style="display:none">
+												<li value="1">Да</li>
+												<li value="2">Нет</li>
+											</ul>
+										</div>					
+									</div>
+									<!-- //drop-down -->
+
+									<!-- drop-down multiple full-width-->
+									<div class="drop-down single">
+										<label class="real pt10" for="worktype">Сколько книг в год вы читаете?</label class="real">
+											<div class="wrapp-spisok">
+												<input id="q6" class="spisok multiple full-width" type="text" name="q6" fieldname="Есть ли у вас чёрный смокинг?" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+												<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+												<ul style="display:none">
+													<li value='1'>Менее 3</li>
+													<li value='2'>От 3 до 5</li>
+													<li value='3'>От 5 до 8</li>
+													<li value='4'>Более 9</li>
+												</ul>
+											</div>					
+										</div>
+										<!-- //drop-down -->
+
+										<!-- drop-down multiple full-width-->
+										<div class="drop-down multiple">
+											<label class="real pt10" for="worktype">Без каких традиций невозможно свадебное торжество? (Несколько вариантов)</label class="real">
+												<div class="wrapp-spisok">
+													<input id="q7" class="spisok multiple full-width" type="text" name="q7" fieldname="Без каких традиций не возможно свадебное торжество? (Несколько вариантов)" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+													<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+													<ul style="display:none">
+														<li>Каравай</li>
+														<li value="2">Букет и Подвязка</li>
+														<li>Сборы на мальчика и девочку </li>
+														<li>Кража невесты </li>
+														<li>Семейный очаг </li>
+													</ul>
+												</div>					
+											</div>
+											<!-- //drop-down -->
+
+											<!-- drop-down multiple full-width-->
+											<div class="drop-down multiple">
+												<label class="real pt10" for="worktype">Что вы сделаете, если один из влиятельных гостей попросит убавить музыку во время дискотеки? (Несколько вариантов)</label class="real">
+													<div class="wrapp-spisok">
+														<input id="q8" class="spisok multiple full-width" type="text" name="q8" fieldname="Что вы сделаете, если один из влиятельных гостей попросит убавить музыку во время дискотеки? (Несколько вариантов)" placeholder="ВЫБЕРИТЕ ВАРИАНТ" readonly="">
+														<img class="arrowdown" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/arrowpointtodown.svg" alt="">
+														<ul style="display:none">
+															<li value="1">Скажу Dj, чтобы немедленно убавил музыку</li>
+															<li value="2">Согласую этот вопрос с организатором мероприятия</li>
+															<li value="3">Согласую этот вопрос с клиентом на прямую, если мероприятие без организатора</li>
+															<li value="4">Подожду пока он повторит свою просьбу через некоторое время</li>
+															<li value="5">Сделаем вид с Dj, что убавляем музыку, но оставим все, как есть</li>
+														</ul>
+													</div>					
+												</div>
+												<!-- //drop-down -->
+
+														<div class="checbox-wrapp pt15">
+															<div class="item" style="display: flex;">
+																<input class="radioInput-circle" id="radio-input2" checkboximgtarget="checkbox-block2" texttarget="textTarget2" type="checkbox" fieldname="Согласен с условиями?" name="form_checkbox2" style="width:0px" checked="" required="" aria-required="true">	
+																<!-- <img class="error_arrow" src="img/arrow-red-right-down.png" alt="" hidden=""> -->
+																<img id="checbox-block" class="radioinput checkbox-block2" radioinputtarget="radio-input2" src="https://evgeniyvorobev.github.io/multiple-test/provedenie/img/checkbox_sellected.png" checked="" alt=""><p class="textTarget2 fz14_13">Я даю свое <a target="_blank" href="http://provedenie.org/privacy" class="fz14_13 textTarget2 underscoring_url">согласие</a> на обработку персональных данных</p>
+															</div>
+														</div>
+														<button type="submit" style="margin-top:17px;">УЗНАТЬ РЕЗУЛЬТАТ</button>
+														<!-- <button type="button" disabled class="description_error" style="margin-top:5px;">ТЫ ОТВЕТИЛ НЕ НА ВСЕ ВОПРОСЫ!</button> -->
+													</form>
+												</div>
+
+											</div>
+
+
+
+										</body>
+										</html>
