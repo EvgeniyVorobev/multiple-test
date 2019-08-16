@@ -461,33 +461,13 @@ jQuery(document).ready(function (e) {
 
             console.log('Полученный результат массива: 1 этап', finishResult);
 
-            /* Redirected function */
-            var handlers = {
-                Начальный: function () {
-                    setTimeout(function () {
-                        $.cookie("resultlvl", "Ваш уровень Начальный");
-                        window.location = "http://bestshowman.ru/results"
-                    }, 3500)
-                },
-                Уверенный: function () {
-                    setTimeout(function () {
-                        $.cookie("resultlvl", "Ваш уровень Уверенный");
-                        window.location = "http://bestshowman.ru/results"
-                    }, 3500)
-                },
-                Опытный: function () {
-                    setTimeout(function () {
-                        $.cookie("resultlvl", "Ваш уровень Опытный");
-                        window.location = "http://bestshowman.ru/results"
-                    }, 3500)
-                },
-                Профессионал: function () {
-                    setTimeout(function () {
-                        $.cookie("resultlvl", "Ваш уровень Профессионал");
-                        window.location = "http://bestshowman.ru/results"
-                    }, 3500)
-                }
-            }
+		    /* Redirected function */ 
+			var handlers = {
+				Начальный: function() { setTimeout(function(){window.location = "http://http://bestshowman.ru/opros/junior"},3500)},
+				Уверенный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/upper-middle"},3500)},	
+				Опытный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/middle" },3500)},
+				Профессионал: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/senior" },3500)}
+			}
 
             /* Sorting massive by priority by Hierarchy (1-st place Professional) */
             function reSorting(arr) {
