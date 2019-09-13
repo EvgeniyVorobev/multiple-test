@@ -466,10 +466,10 @@ jQuery(document).ready(function (e) {
 
 		    /* Redirected function */ 
 			var handlers = {
-				Начальный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/junior"},3500)},
-				Уверенный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/upper-middle"},3500)},	
-				Опытный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/middle" },3500)},
-				Профессионал: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/senior" },3500)}
+				// Начальный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/junior"},3500)},
+				// Уверенный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/upper-middle"},3500)},
+				// Опытный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/middle" },3500)},
+				// Профессионал: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/senior" },3500)}
 			}
 
             /* Sorting massive by priority by Hierarchy (1-st place Professional) */
