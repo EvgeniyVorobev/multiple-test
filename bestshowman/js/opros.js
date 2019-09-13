@@ -554,5 +554,6 @@ jQuery(document).ready(function (e) {
     });
 });
 
+/* //JQUERY VALIDATION  */
 
 
