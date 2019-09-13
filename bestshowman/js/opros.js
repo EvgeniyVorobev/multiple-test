@@ -468,7 +468,7 @@ jQuery(document).ready(function (e) {
                 var formdata = $("#interview").serialize();
                 $.ajax({
                     method:'GET',
-                    url: 'https://script.google.com/macros/s/AKfycbxkFfOLGtrPLKjEV7nwkOQRW_8lhugMufagV-AgkMdw_y3UFPs/exec?' + $("#interview").serialize() + '?level=' + level
+                    url: 'https://script.google.com/macros/s/AKfycbxkFfOLGtrPLKjEV7nwkOQRW_8lhugMufagV-AgkMdw_y3UFPs/exec?' + $("#interview").serialize() + '&level=' + level
                 })
             }
 
