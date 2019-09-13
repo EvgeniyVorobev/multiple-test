@@ -464,12 +464,20 @@ jQuery(document).ready(function (e) {
 
             /* Send To Google Spreedsheet script*/
 
+            function sendToSpreedSheet(level) {
+                var formdata = $("#interview").serialize();
+                $.ajax({
+                    method:'GET',
+                    url: 'https://script.google.com/macros/s/AKfycbxkFfOLGtrPLKjEV7nwkOQRW_8lhugMufagV-AgkMdw_y3UFPs/exec?' + $("#interview").serialize() + '?level=' + level
+                })
+            }
+
 		    /* Redirected function */ 
 			var handlers = {
-				// Начальный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/junior"},3500)},
-				// Уверенный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/upper-middle"},3500)},
-				// Опытный: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/middle" },3500)},
-				// Профессионал: function() { setTimeout(function(){window.location = "http://bestshowman.ru/opros/senior" },3500)}
+				Начальный: function() { sendToSpreedSheet(maxLevel) ; setTimeout(function(){window.location = "http://bestshowman.ru/opros/junior"},3500)},
+				Уверенный: function() { sendToSpreedSheet(maxLevel) ;  setTimeout(function(){window.location = "http://bestshowman.ru/opros/upper-middle"},3500)},
+				Опытный: function() { sendToSpreedSheet(maxLevel) ; setTimeout(function(){window.location = "http://bestshowman.ru/opros/middle" },3500)},
+				Профессионал: function() { sendToSpreedSheet(maxLevel) ; setTimeout(function(){window.location = "http://bestshowman.ru/opros/senior" },3500)}
 			}
 
             /* Sorting massive by priority by Hierarchy (1-st place Professional) */
@@ -516,7 +524,7 @@ jQuery(document).ready(function (e) {
             }
             console.log("[" + maxLevel + '] уровень больше:', maxCount);
             handlers[maxLevel](); 	// execute code for level
-            evgCarrot.interviewForm(maxLevel, e.target) // send result width form object to interviewForm.
+            // evgCarrot.interviewForm(maxLevel, e.target) // send result width form object to interviewForm.
             /* End of repeated*/
 
             /* Result in popup.*/
@@ -546,4 +554,5 @@ jQuery(document).ready(function (e) {
     });
 });
 
-/* //JQUERY VALIDATION  */
+
+
