@@ -210,7 +210,7 @@ jQuery(document).ready(function (e) {
         var knowaboutus = jQuery("#knowaboutus").val();
         var whereknow = jQuery("#whereknow").val();
         var subscribe = jQuery("#subscribe").val();
-        console.log($(this).serialize();)
+        console.log($(this).serialize();
         if (validation == false) {
             for (var i = 0; i < $('.radioInput-circle').length; i++) {
                 if ($('.radioInput-circle')[i].hasAttribute('checked') == false && $('.radioInput-circle')[i].hasAttribute('required')) {
