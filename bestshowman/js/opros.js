@@ -152,7 +152,7 @@ function validation(id) {
             },
             phone: {
                 required: true,
-                number: true,
+               // number: true,
                 minlength: 5
             },
             q1: {
