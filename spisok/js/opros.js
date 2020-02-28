@@ -1,0 +1,65 @@
+$(document).ready(function function_name(argument) {
+	$('.drop-down .arrowdown').click(function (e) {
+	$(e.target.previousElementSibling).click();
+	});
+
+/* ~ SCRIPT FOR SINGLE DROPDOWN CHOICE ~*/
+$('.spisok.single').click(function(e){
+	var target = e.target;
+	var ulElement = $(target).siblings("ul")[0];
+	ulElement.style.display == 'none' ? ulElement.style.display = 'inherit' : ulElement.style.display = 'none';
+	for (var i = 0; i < $('.drop-down.single ul').length; i++) {
+		$('.drop-down.single ul')[i] != ulElement ? $('.drop-down.single ul')[i].style.display = 'none' : '' ;
+	}
+	target.hasAttribute('active') ? target.removeAttribute('active') : target.setAttribute('active','');
+});
+
+// select single choice in dropdown.
+$('.drop-down.single ul').click(function(e){
+	var choice = e.target.innerHTML;
+	var target = e.target;
+	var input = $(target).parent().siblings('input')[0];
+	if (target.tagName != 'UL') {
+		target.style.backgroundColor == ''  ? target.style = "background-color: gainsboro;" : '' ;
+		target.closest('ul').style.display = 'none'; // close when clicked in single field.
+		target.setAttribute('active','');
+		input.value=choice;
+		console.log($(target));
+		if ($(target).data('text1') != '') {
+			$('[href="#text1"]').text($(target).data('text1'));
+		}
+		if ($(target).data('text2') != '') {
+			$('[href="#text2"]').text($(target).data('text2'));
+		}
+		if ($(target).data('text3') != '') {
+			$('[href="#text3"]').text($(target).data('text3'));
+		}
+		if ($(target).data('text4') != '') {
+			$('[href="#text4"]').text($(target).data('text4'));
+		}
+		if ($(target).data('text5') != '') {
+			$('[href="#text5"]').text($(target).data('text5'));
+		}
+		for (var i = 0; i < target.parentElement.childNodes.length; i++) {
+			if (target.parentElement.childNodes[i] != target && target.parentElement.childNodes[i].tagName == 'LI') {
+				target.parentElement.childNodes[i].style.backgroundColor = '' ;
+				target.parentElement.childNodes[i].removeAttribute('active');
+			// $(input).valid(); // Костыль, для корректной работы, jquery validation, повторная валидация конкретного инпута.
+		}
+	}
+}
+})
+
+// closed all drop-down windows if clicked behind drop-down block.
+$(document.body).click(function(e){
+	for (var i = 0; i < $('.drop-down.single ul').length; i++) {
+		if (e.target.closest('.drop-down.single') == null  ) {
+			$('.drop-down.single ul')[i].style.display = 'none' ;
+		}
+	}
+})
+/* ~~~ END OF SINGLE DROPDOWN CHOICE ~~~ */
+})
+
+
+
