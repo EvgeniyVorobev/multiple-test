@@ -1,4 +1,7 @@
 $(document).ready(function function_name(argument) {
+
+    var cookie_town = 	getCookie('selected_town');
+
 	$('.drop-down .arrowdown').click(function (e) {
 	$(e.target.previousElementSibling).click();
 	});
@@ -24,7 +27,7 @@ $('.drop-down.single ul').click(function(e){
 		target.closest('ul').style.display = 'none'; // close when clicked in single field.
 		target.setAttribute('active','');
 		input.value=choice;
-		console.log($(target));
+		document.cookie = 'selected_town =' + $(target).text();
 		if ($(target).data('text1') != '') {
 			$('[href="#text1"]').text($(target).data('text1'));
 		}
@@ -40,6 +43,7 @@ $('.drop-down.single ul').click(function(e){
 		if ($(target).data('text5') != '') {
 			$('[href="#text5"]').text($(target).data('text5'));
 		}
+
 		for (var i = 0; i < target.parentElement.childNodes.length; i++) {
 			if (target.parentElement.childNodes[i] != target && target.parentElement.childNodes[i].tagName == 'LI') {
 				target.parentElement.childNodes[i].style.backgroundColor = '' ;
@@ -59,7 +63,23 @@ $(document.body).click(function(e){
 	}
 })
 /* ~~~ END OF SINGLE DROPDOWN CHOICE ~~~ */
+
+    // возвращает куки с указанным name,
+    // или undefined, если ничего не найдено
+	function getCookie(name) {
+		let matches = document.cookie.match(new RegExp(
+			"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+		));
+		return matches ? decodeURIComponent(matches[1]) : undefined;
+	}
+
+    if (cookie_town != '') {
+        for (var i=0; i < $('.drop-down.single ul li').length; i++) {
+            // console.log($('.drop-down.single ul li')[i]);
+            if ($('.drop-down.single ul li').eq(i).text() == cookie_town) {
+                // console.log($('.drop-down.single ul li').eq(i));
+                $('.drop-down.single ul li').eq(i).click();
+            }
+        }
+    }
 })
-
-
-
