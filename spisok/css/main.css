@@ -223,6 +223,7 @@
   cursor: pointer; }
 
 #interview input {
+  background-color: #262626;
   font-family: 'GothaProBol';
   color: white;
   text-transform: uppercase; }
@@ -277,10 +278,10 @@
     top: 19px;
     right: 14px;
     cursor: pointer; }
-#q3 input {
-  background-color: #262626;
-  color: white;
-}
+/*#q3 input {*/
+/*  background-color: #262626;*/
+/*  color: white;*/
+/*}*/
 .spisok {
   max-width: 300px;
   width: 100%;
