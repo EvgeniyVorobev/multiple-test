@@ -101,6 +101,7 @@ $(document).ready(function function_name(argument) {
     // show zeroblock
     if (zeroblock != '') {
         $(zeroblock).show();
+        console.log(zeroblock);
     } else {
         $('.drop-down.single ul li[data-zeroblock]').each(function (i, d) {
             $($(d).data('zeroblock')).hide();
