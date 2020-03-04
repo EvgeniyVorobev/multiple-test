@@ -277,7 +277,10 @@
     top: 19px;
     right: 14px;
     cursor: pointer; }
-
+.wrapp-spisok input {
+  background-color: black;
+  color: white;
+}
 .spisok {
   max-width: 300px;
   width: 100%;
