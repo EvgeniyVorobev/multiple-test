@@ -52,9 +52,10 @@ $(document).ready(function function_name(argument) {
 				$(zeroblock).show();
 
 				$('.drop-down.single ul li[data-zeroblock]').each(function(i,d) {
-					if ($(d).data('zeroblock') != zeroblock) {
-						$(d).data('zeroblock').hide();
-					}
+				    console.log ($(d));
+					// if ($(d).data('zeroblock') != zeroblock) {
+					// 	$(d).data('zeroblock').hide();
+					// }
 				})
 			}
 
