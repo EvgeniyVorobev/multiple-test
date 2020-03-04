@@ -23,7 +23,7 @@ $('.drop-down.single ul').click(function(e){
 	var target = e.target;
 	var input = $(target).parent().siblings('input')[0];
 	if (target.tagName != 'UL') {
-		target.style.backgroundColor == ''  ? target.style = "background-color: gainsboro;" : '' ;
+		// target.style.backgroundColor == ''  ? target.style = "background-color: gainsboro;" : '' ;
 		target.closest('ul').style.display = 'none'; // close when clicked in single field.
 		target.setAttribute('active','');
 		input.value=choice;

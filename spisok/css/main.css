@@ -316,13 +316,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: white; }
+  background-color: #262626; }
   .drop-down ul li {
     list-style-type: none;
+    background-color: #262626;
     font-family: 'GothaProMed';
+    color: white;
     padding: 10px 10px 10px 10px; }
     .drop-down ul li:hover {
-      background-color: #E6E2E6;
+      background-color: #151515d1;
       background-position: 0 -10px; }
     .drop-down ul li:first-child {
       padding: 10px 10px 10px 10px; }
