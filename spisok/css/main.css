@@ -1,14 +1,14 @@
 @font-face {
   font-family: 'GothaProReg';
-  src: url("https://www.profildoors.ru/layout/css/fonts/Gotham-Pro/GothaProReg.otf"); }
+  src: url("https://evgeniyvorobev.github.io/multiple-test/spisok/fonts/GothaProReg.otf"); }
 
 @font-face {
   font-family: 'GothaProMed';
-  src: url("https://www.profildoors.ru/layout/css/fonts/Gotham-Pro/GothaProMed.otf"); }
+  src: url("https://evgeniyvorobev.github.io/multiple-test/spisok/fonts/GothaProMed.otf"); }
 
 @font-face {
   font-family: 'GothamProBol';
-  src: url("https://www.profildoors.ru/layout/css/fonts/Gotham-Pro/GothaProBol.otf"); }
+  src: url("https://evgeniyvorobev.github.io/multiple-test/spisok/fonts/GothaProBol.otf"); }
 
 .result-txt {
   font-family: "GothaProReg";
