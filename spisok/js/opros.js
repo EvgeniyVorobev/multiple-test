@@ -53,9 +53,9 @@ $(document).ready(function function_name(argument) {
 
 				$('.drop-down.single ul li[data-zeroblock]').each(function(i,d) {
 				    console.log ($(d));
-					// if ($(d).data('zeroblock') != zeroblock) {
-					// 	$(d).data('zeroblock').hide();
-					// }
+					if ($(d).data('zeroblock') != zeroblock) {
+						$(d).hide();
+					}
 				})
 			}
 
