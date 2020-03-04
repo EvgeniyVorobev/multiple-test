@@ -319,7 +319,7 @@
   background-color: white; }
   .drop-down ul li {
     list-style-type: none;
-    /*font-family: 'GothamProBol';*/
+    font-family: 'GothaProMed';
     padding: 10px 10px 10px 10px; }
     .drop-down ul li:hover {
       background-color: #E6E2E6;
