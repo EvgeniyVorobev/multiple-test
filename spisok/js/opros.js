@@ -103,6 +103,7 @@ $(document).ready(function function_name(argument) {
         $(zeroblock).show();
         console.log(zeroblock);
     } else {
+        alert('work');
         $('.drop-down.single ul li[data-zeroblock]').each(function (i, d) {
             $($(d).data('zeroblock')).hide();
         })
