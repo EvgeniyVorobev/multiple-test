@@ -1,17 +1,17 @@
-/*@font-face {*/
-/*  font-family: 'Muller';*/
-/*  src: url("https://static.tildacdn.com/tild3964-3430-4534-b363-336338663838/FontfabricMullerBold.woff"); }*/
+@font-face {
+  font-family: 'GothaProReg';
+  src: url("https://www.profildoors.ru/layout/css/fonts/Gotham-Pro/GothaProReg.otf"); }
 
-/*@font-face {*/
-/*  font-family: 'MullerRegular';*/
-/*  src: url("https://static.tildacdn.com/tild6164-3934-4234-b064-613462336335/MullerRegular.woff"); }*/
+@font-face {
+  font-family: 'GothaProMed';
+  src: url("https://www.profildoors.ru/layout/css/fonts/Gotham-Pro/GothaProMed.otf"); }
 
-/*@font-face {*/
-/*  font-family: 'MullerBlack';*/
-/*  src: url("https://static.tildacdn.com/tild6530-3166-4231-b338-316666396363/MullerBlack.woff"); }*/
+@font-face {
+  font-family: 'GothamProBol';
+  src: url("https://www.profildoors.ru/layout/css/fonts/Gotham-Pro/GothaProBol.otf"); }
 
 .result-txt {
-  font-family: "Muller";
+  font-family: "GothaProReg";
   line-height: 1.3; }
 
 .test-result {
@@ -32,14 +32,14 @@
   transform: translate(-50%, -50%);
   height: 100%; }
   .test-result h2 {
-    font-family: 'Muller';
+    font-family: 'GothaProReg';
     margin: 0; }
   .test-result h1 {
-    font-family: 'MullerBlack';
+    font-family: 'GothaProMed';
     margin: 0; }
   .test-result p {
     margin: 0;
-    font-family: 'MullerRegular'; }
+    font-family: 'GothamProBol'; }
 
 .error {
   border-color: #ffdb18 !important; }
@@ -53,7 +53,7 @@
   background-color: #d1d1d1;
   color: black;
   border: 0;
-  font-family: "Muller";
+  font-family: "GothaProReg";
   font-size: 14px;
   margin-left: 10px;
   margin: 20px auto;
@@ -69,7 +69,7 @@
   display: flex;
   position: relative; }
   .checbox-wrapp p {
-    font-family: 'Muller';
+    font-family: 'GothaProReg';
     font-size: 14px;
     padding-left: 10px; }
 
@@ -118,7 +118,7 @@
   background-color: #e31d1a;
   color: white;
   border: 0;
-  font-family: "Muller";
+  font-family: "GothaProReg";
   font-size: 14px;
   margin: 0px 0px 10px auto;
   width: 100%; }
@@ -137,7 +137,7 @@
   background-color: #e31d1a;
   color: white;
   border: 0;
-  font-family: "Muller";
+  font-family: "GothaProReg";
   font-size: 14px;
   margin-left: 10px;
   margin: 20px auto 0px auto;
@@ -174,11 +174,11 @@
       width: 65px;
       height: 65px; }
   .interview .text-wrap h1 {
-    font-family: 'MullerBlack';
+    font-family: 'GothaProMed';
     margin-top: 0;
     margin-bottom: 0; }
   .interview .text-wrap p {
-    font-family: 'MullerRegular';
+    font-family: 'GothamProBol';
     padding-top: 15px;
     line-height: 1.55; }
   .interview p {
@@ -193,7 +193,7 @@
   background-color: #ffdb18;
   color: black;
   border: 0;
-  font-family: "Muller";
+  font-family: "GothaProReg";
   font-size: 14px;
   margin-left: 10px;
   margin: 20px auto 5px auto;
@@ -206,7 +206,7 @@
   display: block;
   /*padding-left: 12px;*/
   font-size: 12px;
-  font-family: 'Muller';
+  font-family: 'GothaProReg';
   font-weight: bold;
   text-transform: uppercase; }
 
@@ -223,13 +223,13 @@
   cursor: pointer; }
 
 #interview input {
-  font-family: 'Muller';
+  font-family: 'GothaProReg';
   color: black;
   text-transform: uppercase; }
   #interview input::-webkit-input-placeholder, #interview input -moz-placeholder, #interview input -ms-input-placeholder {
     color: #333;
     font-size: 12px;
-    font-family: 'Muller';
+    font-family: 'GothaProReg';
     font-weight: bold; }
   #interview input.right {
     margin-left: 20px; }
@@ -319,7 +319,7 @@
   background-color: white; }
   .drop-down ul li {
     list-style-type: none;
-    /*font-family: 'MullerRegular';*/
+    /*font-family: 'GothamProBol';*/
     padding: 10px 10px 10px 10px; }
     .drop-down ul li:hover {
       background-color: #E6E2E6;
