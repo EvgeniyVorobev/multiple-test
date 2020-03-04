@@ -3,6 +3,7 @@ $(document).ready(function function_name(argument) {
     var cookie_town = getCookie('selected_town');
     var zeroblock = getCookie('show_zero');
 
+
     $('.drop-down .arrowdown').click(function (e) {
         $(e.target.previousElementSibling).click();
     });
@@ -47,17 +48,17 @@ $(document).ready(function function_name(argument) {
             }
 
             // show zeroblock and hide others.
-			if ($(target).data('zeroblock') != '') {
-				let zeroblock = $(target).data('zeroblock');
-				$(zeroblock).show();
+            if ($(target).data('zeroblock') != '') {
+                let zeroblock = $(target).data('zeroblock');
+                $(zeroblock).show();
 
-				$('.drop-down.single ul li[data-zeroblock]').each(function(i,d) {
-				    console.log ($(d));
-					if ($(d).data('zeroblock') != zeroblock) {
-						$($(d).data('zeroblock')).hide();
-					}
-				})
-			}
+                $('.drop-down.single ul li[data-zeroblock]').each(function (i, d) {
+                    console.log($(d));
+                    if ($(d).data('zeroblock') != zeroblock) {
+                        $($(d).data('zeroblock')).hide();
+                    }
+                })
+            }
 
             for (var i = 0; i < target.parentElement.childNodes.length; i++) {
                 if (target.parentElement.childNodes[i] != target && target.parentElement.childNodes[i].tagName == 'LI') {
@@ -87,7 +88,8 @@ $(document).ready(function function_name(argument) {
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
-	// show town
+
+    // show town
     if (cookie_town != '') {
         for (var i = 0; i < $('.drop-down.single ul li').length; i++) {
             // console.log($('.drop-down.single ul li')[i]);
@@ -98,6 +100,10 @@ $(document).ready(function function_name(argument) {
     }
     // show zeroblock
     if (zeroblock != '') {
-    	$(zeroblock).show();
-	}
- })
+        $(zeroblock).show();
+    } else {
+        $('.drop-down.single ul li[data-zeroblock]').each(function (i, d) {
+            $($(d).data('zeroblock')).hide();
+        })
+    }
+})
