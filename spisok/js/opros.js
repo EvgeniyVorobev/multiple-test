@@ -99,11 +99,10 @@ $(document).ready(function function_name(argument) {
         }
     }
     // show zeroblock
-    if (zeroblock != '') {
+    if (zeroblock != '' && zeroblock != undefined) {
         $(zeroblock).show();
         console.log(zeroblock);
     } else {
-        alert('work');
         $('.drop-down.single ul li[data-zeroblock]').each(function (i, d) {
             $($(d).data('zeroblock')).hide();
         })
