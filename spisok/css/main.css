@@ -7,7 +7,7 @@
   src: url("https://evgeniyvorobev.github.io/multiple-test/spisok/fonts/GothaProMed.otf"); }
 
 @font-face {
-  font-family: 'GothamProBol';
+  font-family: 'GothaProBol';
   src: url("https://evgeniyvorobev.github.io/multiple-test/spisok/fonts/GothaProBol.otf"); }
 
 .result-txt {
@@ -223,13 +223,13 @@
   cursor: pointer; }
 
 #interview input {
-  font-family: 'GothaProReg';
+  font-family: 'GothaProBol';
   color: black;
   text-transform: uppercase; }
   #interview input::-webkit-input-placeholder, #interview input -moz-placeholder, #interview input -ms-input-placeholder {
     color: #333;
     font-size: 12px;
-    font-family: 'GothaProReg';
+    font-family: 'GothaProBol';
     font-weight: bold; }
   #interview input.right {
     margin-left: 20px; }
