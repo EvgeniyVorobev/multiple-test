@@ -228,7 +228,7 @@
   color: white;
   text-transform: uppercase; }
   #interview input::-webkit-input-placeholder, #interview input -moz-placeholder, #interview input -ms-input-placeholder {
-    color: #333;
+    color: white;
     font-size: 12px;
     font-family: 'GothaProBol';
     font-weight: bold; }
