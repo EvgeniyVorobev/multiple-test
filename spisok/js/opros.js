@@ -28,6 +28,7 @@ $('.drop-down.single ul').click(function(e){
 		target.setAttribute('active','');
 		input.value=choice;
 		document.cookie = 'selected_town =' + $(target).text();
+		document.cookie = 'show_zero =' + $(target).data('zeroblock');
 		if ($(target).data('text1') != '') {
 			$('[href="#text1"]').text($(target).data('text1'));
 		}
