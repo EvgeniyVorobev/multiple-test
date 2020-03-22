@@ -32,19 +32,19 @@ $(document).ready(function function_name(argument) {
             document.cookie = 'selected_town =' + $(target).text();
             document.cookie = 'show_zero =' + $(target).data('zeroblock');
             if ($(target).data('text1') != '') {
-                $('[href="#text1"]').text($(target).data('text1'));
+                $('[href="#text1"]').html($(target).data('text1'));
             }
             if ($(target).data('text2') != '') {
-                $('[href="#text2"]').text($(target).data('text2'));
+                $('[href="#text2"]').html($(target).data('text2'));
             }
             if ($(target).data('text3') != '') {
-                $('[href="#text3"]').text($(target).data('text3'));
+                $('[href="#text3"]').html($(target).data('text3'));
             }
             if ($(target).data('text4') != '') {
-                $('[href="#text4"]').text($(target).data('text4'));
+                $('[href="#text4"]').html($(target).data('text4'));
             }
             if ($(target).data('text5') != '') {
-                $('[href="#text5"]').text($(target).data('text5'));
+                $('[href="#text5"]').html($(target).data('text5'));
             }
 
             // show zeroblock and hide others.
