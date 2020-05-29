@@ -135,8 +135,7 @@ $(function () {
 
     // Добавляем выбор конкретного города в меню исходя из геолокации, если геолокация области(региона) не соответствует городу и пользователь не выбирал уже город вручную, то выбираем вариант по дефолту с установленным параметром!
     function setTown(region) {
-        $('.drop-down.single ul li:contains("Екатеринбург")').attr('data-default', 'default'); // Установим по умолчанию Екатеринбург
-
+        
         // установка регионов и их городов по выбору.
         var regions = {
             "SVE": "Екатеринбург",
@@ -144,8 +143,7 @@ $(function () {
             "CHE": "Челябинск",
             "KHM": "Сургут",
             "PER": "Пермь",
-            "TYU": "Тюмень",
-            "51" : "Челябинск"
+            "TYU": "Тюмень"
         }
 
         function regionIs() {
@@ -165,6 +163,7 @@ $(function () {
         }
         // если куки города не установлено и регион не совпадает с городом, устанавливаем дефолтное значение.
         if (cookie_town == undefined && regionIs() == false) {
+            $('.drop-down.single ul li:contains("Екатеринбург")').attr('data-default', 'default'); // Установим по умолчанию Екатеринбург
             console.log('дефолтный город установленный', $('.drop-down.single ul li[data-default="default"]').text())
             $('.drop-down.single ul li[data-default="default"]').click(); // Выберем значение по дефолту
         }
@@ -177,11 +176,3 @@ $(function () {
     $('[data-elem-type="image"').css({"z-index": '10'})
     $('[data-elem-type="text"').css({"z-index": '10'})
 })
-
-// Кастомная функция для удаление всех кукисов
-function removeCookies() {
-    var cookies = $.cookie();
-    for (var cookie in cookies) {
-        $.removeCookie(cookie);
-    }
-}
