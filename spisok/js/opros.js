@@ -137,6 +137,11 @@ $(function () {
                 }
             }
         }
+
+
+        console.log('cookie_town', cookie_town);
+        console.log('regionIs()s',regionIs());
+
         // если нет куки города и регион совпадает с городом
         if (cookie_town == undefined && regionIs()) {
             $('.drop-down.single ul li:contains('+ regionIs() +')').click();
@@ -150,8 +155,6 @@ $(function () {
         }
     }
 
-    console.log('cookie_town', cookie_town);
-    console.log('regionIs()',regionIs());
 })
 
 /*выводим в верзхний слой меню, уменьшаем z-index у мешающих элементов*/
