@@ -108,14 +108,14 @@ $(function () {
 
     /* Add Geolocation */
     // Api для получения результата региона,города и.т.д не работает для https :((
-    $.getJSON("http://ip-api.com/json/?lang=ru", function (data) {
-        var data_body = "";
-        $.each(data, function (k, v) {
-            data_body += "<b>" + k + "</b> : <i>" + v + "</i><br />";
-        });
-        setTown(data.region);
-        console.log('data !!!!!', data)
-    });
+    // $.getJSON("http://ip-api.com/json/?lang=ru", function (data) {
+    //     var data_body = "";
+    //     $.each(data, function (k, v) {
+    //         data_body += "<b>" + k + "</b> : <i>" + v + "</i><br />";
+    //     });
+    //     setTown(data.region);
+    //     console.log('data !!!!!', data)
+    // });
 
     if (cookie_town == undefined) {
         /* https://docs.ipdata.co/ для апи ключа получение . 50 тыщ запросов в месяц */
@@ -128,14 +128,15 @@ $(function () {
 
         // получение онлайн
         $.getJSON("https://api.ipdata.co/es?api-key=de0c2a5b8254a4c3de4a5066fac694ab098fe352f7d682d64eea47f6", function (data) {
-            console.log('data !!!!!', data.region_code)
+            console.log('Ваш регион: ', data.region_code)
             setTown(data.region_code);
         });
     }
 
     // Добавляем выбор конкретного города в меню исходя из геолокации, если геолокация области(региона) не соответствует городу и пользователь не выбирал уже город вручную, то выбираем вариант по дефолту с установленным параметром!
     function setTown(region) {
-        
+        $('.drop-down.single ul li:contains("Екатеринбург")').attr('data-default', 'default'); // Установим по умолчанию Екатеринбург
+
         // установка регионов и их городов по выбору.
         var regions = {
             "SVE": "Екатеринбург",
@@ -163,7 +164,6 @@ $(function () {
         }
         // если куки города не установлено и регион не совпадает с городом, устанавливаем дефолтное значение.
         if (cookie_town == undefined && regionIs() == false) {
-            $('.drop-down.single ul li:contains("Екатеринбург")').attr('data-default', 'default'); // Установим по умолчанию Екатеринбург
             console.log('дефолтный город установленный', $('.drop-down.single ul li[data-default="default"]').text())
             $('.drop-down.single ul li[data-default="default"]').click(); // Выберем значение по дефолту
         }
