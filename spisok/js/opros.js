@@ -145,7 +145,8 @@ $(function () {
         // если куки города не установлено и регион не совпадает с городом, устанавливаем дефолтное значение.
         if (cookie_town == undefined && regionIs() == false) {
             console.log('дефолтный город установленный', $('.drop-down.single ul li[data-default="default"]').text())
-            $('.drop-down.single ul li[data-default="default"]').click();
+            $('.drop-down.single ul li:contains("Екатеринбург")').attr('data-default','default'); // Установим по умолчанию Екатеринбург
+            $('.drop-down.single ul li[data-default="default"]').click(); // Выберем значение по дефолту
         }
     }
 
