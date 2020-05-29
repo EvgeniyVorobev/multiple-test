@@ -108,7 +108,7 @@ $(function () {
 
     /* Add Geolocation */
     // Api для получения результата региона,города и.т.д
-    $.getJSON("//ip-api.com/json/?lang=ru", function (data) {
+    $.getJSON("http://ip-api.com/json/?lang=ru", function (data) {
         var data_body = "";
         $.each(data, function (k, v) {
             data_body += "<b>" + k + "</b> : <i>" + v + "</i><br />";
