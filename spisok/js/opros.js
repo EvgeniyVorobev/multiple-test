@@ -150,6 +150,8 @@ $(function () {
         }
     }
 
+    console.log('cookie_town', cookie_town);
+    console.log('regionIs()',regionIs());
 })
 
 /*выводим в верзхний слой меню, уменьшаем z-index у мешающих элементов*/
