@@ -151,6 +151,12 @@ $(function () {
 
 })
 
+/*выводим в верзхний слой меню, уменьшаем z-index у мешающих элементов*/
+$(function () {
+    $('[data-elem-type="image"').css({"z-index" : '10'})
+    $('[data-elem-type="text"').css({"z-index" : '10'})
+})
+
 // Кастомная функция для удаление всех кукисов
 function removeCookies() {
     var cookies = $.cookie();
