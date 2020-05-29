@@ -1,8 +1,6 @@
-$(document).ready(function function_name(argument) {
-
+$(function () {
     var cookie_town = getCookie('selected_town');
     var zeroblock = getCookie('show_zero');
-
 
     $('.drop-down .arrowdown').click(function (e) {
         $(e.target.previousElementSibling).click();
@@ -19,7 +17,7 @@ $(document).ready(function function_name(argument) {
         target.hasAttribute('active') ? target.removeAttribute('active') : target.setAttribute('active', '');
     });
 
-// select single choice in dropdown.
+    // select single choice in dropdown.
     $('.drop-down.single ul').click(function (e) {
         var choice = e.target.innerHTML;
         var target = e.target;
@@ -70,7 +68,7 @@ $(document).ready(function function_name(argument) {
         }
     })
 
-// closed all drop-down windows if clicked behind drop-down block.
+    // closed all drop-down windows if clicked behind drop-down block.
     $(document.body).click(function (e) {
         for (var i = 0; i < $('.drop-down.single ul').length; i++) {
             if (e.target.closest('.drop-down.single') == null) {
@@ -107,4 +105,56 @@ $(document).ready(function function_name(argument) {
             $($(d).data('zeroblock')).hide();
         })
     }
+
+    /* Add Geolocation */
+    // Api для получения результата региона,города и.т.д
+    $.getJSON("//ip-api.com/json/?lang=ru", function (data) {
+        var data_body = "";
+        $.each(data, function (k, v) {
+            data_body += "<b>" + k + "</b> : <i>" + v + "</i><br />";
+        });
+        setTown(data.region);
+    });
+
+    // Добавляем выбор конкретного города в меню исходя из геолокации, если геолокация области(региона) не соответствует городу и пользователь не выбирал уже город вручную, то выбираем вариант по дефолту с установленным параметром!
+    function setTown(region) {
+        // установка регионов и их городов по выбору.
+        var regions = {
+            "SVE" : "Екатеринбург",
+            "YAN" : "Новый Уренгой",
+            "CHE" : "Челябинск",
+            "KHM" : "Сургут",
+            "PER" : "Пермь",
+            "TYU" : "Тюмень",
+        }
+
+        function regionIs() {
+            for (key in regions) {
+                if (region == key) {
+                    return regions[key];
+                } else {
+                    return false
+                }
+            }
+        }
+        // если нет куки города и регион совпадает с городом
+        if (cookie_town == undefined && regionIs()) {
+            $('.drop-down.single ul li:contains('+ regionIs() +')').click();
+            console.log('Город региона по ip:', regionIs());
+        }
+        // если куки города не установлено и регион не совпадает с городом, устанавливаем дефолтное значение.
+        if (cookie_town == undefined && regionIs() == false) {
+            console.log('дефолтный город установленный', $('.drop-down.single ul li[data-default="default"]').text())
+            $('.drop-down.single ul li[data-default="default"]').click();
+        }
+    }
+
 })
+
+// Кастомная функция для удаление всех кукисов
+function removeCookies() {
+    var cookies = $.cookie();
+    for(var cookie in cookies) {
+        $.removeCookie(cookie);
+    }
+}
