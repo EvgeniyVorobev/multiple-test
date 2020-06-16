@@ -17,8 +17,76 @@ $(function () {
         target.hasAttribute('active') ? target.removeAttribute('active') : target.setAttribute('active', '');
     });
 
-    // select single choice in dropdown.
-    $('.drop-down.single ul').click(function (e) {
+    // select single choice in dropdown для 1-го списка.
+    $('#interview .drop-down.single ul').click(function (e) {
+        var choice = e.target.innerHTML;
+        var target = e.target;
+        var input = $(target).parent().siblings('input')[0];
+        if (target.tagName != 'UL') {
+            // target.style.backgroundColor == ''  ? target.style = "background-color: gainsboro;" : '' ;
+            target.closest('ul').style.display = 'none'; // close when clicked in single field.
+            target.setAttribute('active', '');
+            input.value = choice;
+            document.cookie = 'selected_town =' + $(target).text();
+            document.cookie = 'show_zero =' + $(target).data('zeroblock');
+            /* для первого списка */
+            if ($(target).data('text1') != '' && $(target).data('data-text-target') == undefined) {
+                $('[href="#text1"]').html($(target).data('text1'));
+            }
+            if ($(target).data('text2') != '' && $(target).data('data-text-target') == undefined) {
+                $('[href="#text2"]').html($(target).data('text2'));
+            }
+            if ($(target).data('text3') != '' && $(target).data('data-text-target') == undefined) {
+                $('[href="#text3"]').html($(target).data('text3'));
+            }
+            if ($(target).data('text4') != '' && $(target).data('data-text-target') == undefined) {
+                $('[href="#text4"]').html($(target).data('text4'));
+            }
+            if ($(target).data('text5') != '' && $(target).data('data-text-target') == undefined) {
+                $('[href="#text5"]').html($(target).data('text5'));
+            }
+            /* для второго и последующих у которых есть атрибут */
+            if ($(target).data('text1') != '' && $(target).data('data-text-target') != '') {
+                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text1'));
+            }
+            if ($(target).data('text2') != '' && $(target).data('data-text-target') != '') {
+                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text2'));
+            }
+            if ($(target).data('text3') != '' && $(target).data('data-text-target') != '') {
+                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text3'));
+            }
+            if ($(target).data('text4') != '' && $(target).data('data-text-target') != '') {
+                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text4'));
+            }
+            if ($(target).data('text5') != '' && $(target).data('data-text-target') != '') {
+                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text5'));
+            }
+
+            // show zeroblock and hide others.
+            if ($(target).data('zeroblock') != '') {
+                let zeroblock = $(target).data('zeroblock');
+                $(zeroblock).show();
+
+                $('.drop-down.single ul li[data-zeroblock]').each(function (i, d) {
+                    console.log($(d));
+                    if ($(d).data('zeroblock') != zeroblock) {
+                        $($(d).data('zeroblock')).hide();
+                    }
+                })
+            }
+
+            for (var i = 0; i < target.parentElement.childNodes.length; i++) {
+                if (target.parentElement.childNodes[i] != target && target.parentElement.childNodes[i].tagName == 'LI') {
+                    target.parentElement.childNodes[i].style.backgroundColor = '';
+                    target.parentElement.childNodes[i].removeAttribute('active');
+                    // $(input).valid(); // Костыль, для корректной работы, jquery validation, повторная валидация конкретного инпута.
+                }
+            }
+        }
+    })
+
+    // select single choice in dropdown для 2-го списка.
+    $('#interview.dropdown2 .drop-down.single ul').click(function (e) {
         var choice = e.target.innerHTML;
         var target = e.target;
         var input = $(target).parent().siblings('input')[0];
@@ -30,20 +98,21 @@ $(function () {
             document.cookie = 'selected_town =' + $(target).text();
             document.cookie = 'show_zero =' + $(target).data('zeroblock');
             if ($(target).data('text1') != '') {
-                $('[href="#text1"]').html($(target).data('text1'));
+                $('[href="#text1_1"]').html($(target).data('text1'));
             }
             if ($(target).data('text2') != '') {
-                $('[href="#text2"]').html($(target).data('text2'));
+                $('[href="#text2_2"]').html($(target).data('text2'));
             }
             if ($(target).data('text3') != '') {
-                $('[href="#text3"]').html($(target).data('text3'));
+                $('[href="#text3_3"]').html($(target).data('text3'));
             }
             if ($(target).data('text4') != '') {
-                $('[href="#text4"]').html($(target).data('text4'));
+                $('[href="#text4_4"]').html($(target).data('text4'));
             }
             if ($(target).data('text5') != '') {
-                $('[href="#text5"]').html($(target).data('text5'));
+                $('[href="#text5_5"]').html($(target).data('text5'));
             }
+
 
             // show zeroblock and hide others.
             if ($(target).data('zeroblock') != '') {
@@ -173,6 +242,6 @@ $(function () {
 /*выводим в верзхний слой меню, уменьшаем z-index у мешающих элементов*/
 $(function () {
     $('[data-elem-type="html"').css({"z-index": '1000'})
-   // $('[data-elem-type="image"').css({"z-index": '10'})
-   // $('[data-elem-type="text"').css({"z-index": '10'})
+    // $('[data-elem-type="image"').css({"z-index": '10'})
+    // $('[data-elem-type="text"').css({"z-index": '10'})
 })
