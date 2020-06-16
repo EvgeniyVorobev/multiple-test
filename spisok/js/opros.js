@@ -30,19 +30,19 @@ $(function () {
             document.cookie = 'selected_town =' + $(target).text();
             document.cookie = 'show_zero =' + $(target).data('zeroblock');
             /* для первого списка */
-            if ($(target).data('text1') != '' && $(target).data('data-text-target') == undefined) {
+            if ($(target).data('text1') != '' && $(target).data('text-target') == undefined) {
                 $('[href="#text1"]').html($(target).data('text1'));
             }
-            if ($(target).data('text2') != '' && $(target).data('data-text-target') == undefined) {
+            if ($(target).data('text2') != '' && $(target).data('text-target') == undefined) {
                 $('[href="#text2"]').html($(target).data('text2'));
             }
-            if ($(target).data('text3') != '' && $(target).data('data-text-target') == undefined) {
+            if ($(target).data('text3') != '' && $(target).data('text-target') == undefined) {
                 $('[href="#text3"]').html($(target).data('text3'));
             }
-            if ($(target).data('text4') != '' && $(target).data('data-text-target') == undefined) {
+            if ($(target).data('text4') != '' && $(target).data('text-target') == undefined) {
                 $('[href="#text4"]').html($(target).data('text4'));
             }
-            if ($(target).data('text5') != '' && $(target).data('data-text-target') == undefined) {
+            if ($(target).data('text5') != '' && $(target).data('text-target') == undefined) {
                 $('[href="#text5"]').html($(target).data('text5'));
             }
             /* для второго и последующих у которых есть атрибут */
@@ -50,16 +50,16 @@ $(function () {
                 $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text1'));
             }
             if ($(target).data('text2') != '' && $(target).data('data-text-target') != '') {
-                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text2'));
+                $('[href="' + $(target).data('text-target') + '"]').html($(target).data('text2'));
             }
             if ($(target).data('text3') != '' && $(target).data('data-text-target') != '') {
-                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text3'));
+                $('[href="' + $(target).data('text-target') + '"]').html($(target).data('text3'));
             }
             if ($(target).data('text4') != '' && $(target).data('data-text-target') != '') {
-                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text4'));
+                $('[href="' + $(target).data('text-target') + '"]').html($(target).data('text4'));
             }
             if ($(target).data('text5') != '' && $(target).data('data-text-target') != '') {
-                $('[href="' + $(target).data('data-text-target') + '"]').html($(target).data('text5'));
+                $('[href="' + $(target).data('text-target') + '"]').html($(target).data('text5'));
             }
 
             // show zeroblock and hide others.
