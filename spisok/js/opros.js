@@ -30,7 +30,7 @@ $(function () {
             document.cookie = 'selected_town =' + $(target).text();
             document.cookie = 'show_zero =' + $(target).data('zeroblock');
             /* для первого списка */
-            if ($(target).parents('#interview.second-slider')[0] == undefined ) {
+            if ($(target).parents('#interview.second-dropdown')[0] == undefined ) {
                 if ($(target).data('text1') != '') {
                     $('[href="#text1"]').html($(target).data('text1'));
                 }
@@ -48,7 +48,7 @@ $(function () {
                 }
             }
 
-            if ($(target).parents('#interview.second-slider')[0] != undefined ) {
+            if ($(target).parents('#interview.second-dropdown')[0] != undefined ) {
                 if ($(target).data('text1') != '') {
                     $('[href="#2_text1"]').html($(target).data('text1'));
                 }
